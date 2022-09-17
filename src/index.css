@@ -1,13 +1,22 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card{
+    @apply bg-none border border-solid border-white rounded-3xl overflow-hidden shadow-md relative 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.badge{
+    @apply bg-red-500 text-blue-200 text-xs uppercase font-bold rounded-full p-2 absolute;
+}
+
+.password{
+    @apply focus:outline-none focus:border-sky-400
+}
+
+@layer base {
+    body {
+        font-family: 'Exo 2', sans-serif;
+    }
+    
 }
